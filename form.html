@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css">
+		.container{
+			max-width: 1024px;
+		}
+		.containerHeader{
+			width: 100%;
+			height: 30px;
+			line-height: 30px;
+			border-bottom: 1px solid #ccc;
+		}
+		.containerHeaderLeft{
+			float: left;
+			padding-left: 10px;
+		}
+		.containerHeaderRight{
+			float: right;
+			color: red;
+			padding-right: 10px;
+		}
+		form{
+			padding-left: 40px;
+			padding-right: 20px;
+			margin-top: 20px;
+		}
+		label{
+			background-color: #f9f9f9;
+		}
+		.control-label{
+			padding-top: 13px;
+			padding-bottom: 20px;
+			color: ;
+		}
+		.form-group{
+			margin-bottom: 0px;
+		}
+		.control-labelBlue{
+	    	color:#0e91d3;
+		}
+		.control-label span{
+			color: red;
+		}
+		.timeLable{
+			display: block;
+			margin-bottom: 5px;
+			background-color: #fff;
+			margin-left: 10px;
+		}
+		.inputTimeLabel{
+			padding-bottom: 45px;
+		}
+		.textareaLabel{
+			padding-bottom: 60px;
+		}
+		.timeLable span{
+			/* color: #ccc; */
+			margin-left: 10px;
+			margin-right: 10px;
+			font-size: 16px;
+			font-weight: normal;
+
+		}
+		.startTime,.stopTime{
+			width: 40%;
+			display: inline;
+		}
+		.btn-info{
+			margin-left: 15px;
+		}
+		.moneyYuan{
+		    margin-top: 5px;
+			display: block;
+		}
+		.ProductBox{
+			width: 600px;
+			height: 400px;
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			margin-left: -300px;
+			margin-top: -200px;
+			background-color: #f9f9f9;
+			padding: 0px;
+		}
+		.productBoxPos{
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+		.containerProHeader{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			border-bottom: 1px solid #ccc;
+		}
+		.containerProHeaderCenter{
+			text-align: center;
+		}
+		.searchBox{
+			margin-top: 40px;
+			height: 40px;
+			
+			/* font-size: 0px; */
+			line-height: 40px;
+		}
+		.searchInput{
+			display: inline;
+			width: 70%;
+			height: 40px;
+			padding: 0px;
+			margin: 0px;
+		}
+		.searchBtn{
+			width: 25%;
+			height: 40px;
+			margin: 0px;
+			padding: 0px;
+			margin-left: -3px;
+		}
+		.table th{
+			border: 0px !important;
+		}
+		.footerBtn{
+			height: 40px;
+			width: 100%;
+			line-height: 40px;
+			position: absolute;
+			bottom: 0px;
+			font-size: 0px;
+		}
+		.footerBtn button{
+			width: 50%;
+			/* padding: 0px;
+			margin: 0px; */
+			height: 100%;
+			-webkit-box-sizing:border-box;
+		}
+		.productList{
+			padding-bottom: 150px;
+		}
+		.allMore{
+			width: 100%;
+			height: 25px;
+			text-align: center;
+			font-size: 14px;
+		}
+		.overflowBox{
+			overflow-y: scroll;
+			height: 360px;
+			padding-bottom: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" id="container">
+		<div class="containerHeader">
+			<span class="containerHeaderLeft">添加会员卡</span>
+			<span class="containerHeaderRight">带*为必填</span>
+		</div>
+		<!-- <div class="containerForm">
+			<nav>
+				
+			</nav>
+
+		</div> -->
+		<form class="form-horizontal">
+			<div class="form-group">
+			    <label  class="col-sm-4 control-label control-labelBlue">基本信息</label>
+			    
+			</div>
+			<div class="form-group">
+			    <label for="inputName" class="col-sm-4 control-label"><span>*</span>名称</label>
+			    <div class="col-sm-4">
+			    	<input type="text" class="form-control" id="inputName" placeholder="名称">
+			    </div>
+			</div>
+			<div class="form-group">
+			   	<label for="inputTime" class="col-sm-4 control-label inputTimeLabel">有效期</label>
+			    <div class="col-sm-6">
+			    	<label class="timeLable">
+			    		<input type="radio" name="radioOptions"><span>无期限</span>
+			    	</label>
+					<label class="timeLable" >
+						<input type="radio" name="radioOptions">
+						<input type="text" name="startTime" class="form-control startTime">
+						<span>--</span>
+						<input type="text" name="stopTime" class="form-control stopTime">
+					</label>
+			    	<!-- <input type="password" class="form-control" id="inputTime" placeholder="有效期"> -->
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label for="inputTextarea" class="col-sm-4 control-label textareaLabel">使用须知</label>
+			    <div class="col-sm-6">
+			    	<textarea class="form-control" rows="3" placeholder="多行输入"></textarea>
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label for="inputMoney" class="col-sm-4 control-label"><span>*</span>支付金额</label>
+			    <div class="col-sm-4">
+			    	<input type="text" class="form-control" id="inputMoney" v-bind:placeholder="moneyMessage" v-on:blur="checkMoney()" v-model="payMoney">
+			    </div>
+			    <span class="moneyYuan">元</span>
+			</div>
+			<div class="form-group">
+			    <label for="inputMoneyTwo" class="col-sm-4 control-label"><span>*</span>金额</label>
+			    <div class="col-sm-4">
+			    	<input type="text" class="form-control" id="inputMoneyTwo"  v-bind:value="allMoney" readonly>
+			    </div>
+			    <span class="moneyYuan">元</span>
+			</div>
+			<div class="form-group">
+			    <label  class="col-sm-4 control-label control-labelBlue">相关产品</label>
+			    
+			</div>
+			<div class="form-group">
+			    <label for="inputName" class="col-sm-4 control-label productList">产品</label>
+			    <div><button type="button" class="btn btn-info" v-on:click="chooseProduct">选择产品</button></div>
+			    <div  v-show="chooseProductListStatus" class="col-sm-6">
+			    <table class="table" >
+					<tr>
+						<th>ID</th>
+						<th>名称</th>
+						<th>单价</th>
+						<th>市场价</th>
+					</tr>
+					<tr v-for="item in chooseProductList">
+						<td>{{item.id}}</td>
+						<td>{{item.name}}</td>
+						<td>{{item.newPrice}}</td>
+						<td>{{item.oldPrice}}</td>
+					</tr>
+				</table>
+			</div>
+			</div>
+			
+		</form>
+		<div v-show="showProduct" class="container ProductBox">
+			<div class="productBoxPos">
+				<div class="containerProHeader">
+					<div class="containerProHeaderCenter">选择商品
+					</div>
+				</div>
+				<div class="overflowBox">
+					<div class="searchBox">
+					<label class="col-sm-6">
+						<input type="text" name="search" class="form-control searchInput" v-model="searchName">
+						<button type="button" class="btn default searchBtn" v-on:click="searchProduct">搜索</button>
+					</label>
+				</div>
+				<table class="table">
+					<tr>
+						<th>选项</th>
+						<th>ID</th>
+						<th>名称</th>
+						<th>单价</th>
+						<th>市场价</th>
+					</tr>
+					<tr v-for="item in productList">
+						<td><input type="checkBox" name="chooseProductOption" v-model="chooseProductList" v-bind:value="item"></td>
+						<td>{{item.id}}</td>
+						<td>{{item.name}}</td>
+						<td>{{item.newPrice}}</td>
+						<td>{{item.oldPrice}}</td>
+					</tr>
+				</table>
+				<div class="allMore"><span v-on:click="addMore">点击加载更多...</span></div>
+				</div>
+				
+				<footer class="footerBtn">
+					<button class="btn btn-default" v-on:click="cancle">取消</button>
+					<button class="btn btn-default" v-on:click="sure">确定</button>
+				</footer>
+			</div>
+			
+		</div>
+	</div>
+	
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="http://static.runoob.com/assets/vue/1.0.11/vue.min.js"></script>
+	<script type="text/javascript">
+		var a=new Vue({
+			el:'#container',
+			data:{
+				moneyMessage:"请输入比0大的整数",
+				payMoney:"",
+				allMoney:0,
+				showProduct:false,
+				searchName:"",
+				productList:[
+					{id:"1",name:"苹果",newPrice:12,oldPrice:15},
+					{id:"2",name:"香蕉",newPrice:13,oldPrice:16},
+					{id:"3",name:"梨子",newPrice:15,oldPrice:17},
+				],
+				chooseProductList:[],
+				chooseProductListStatus:false,
+				oldchooseProductList:[],
+			},
+			methods:{
+				checkMoney:function(){
+					var reg=/^[1-9]\d*$/;
+					if(!reg.test(this.payMoney)){
+						this.payMoney=""
+						//this.moneyMessage="请输入比0大的整数"
+					}
+					//console.log(this.payMoney)
+				},
+				chooseProduct:function(){
+					this.chooseProductListStatus=false
+					this.showProduct=true
+					this.oldchooseProductList=[].concat(this.chooseProductList)
+				},
+				searchProduct:function(){
+					var self=this;
+					if(this.searchName===""){
+						alert("条件不能为空")
+					}else{
+						alert(this.searchName)
+					}
+					
+					//ajax请求
+				},
+				cancle:function(){
+					this.showProduct=false
+					// var abc=[];
+					// abc=this.oldchooseProductList
+					this.chooseProductList=this.oldchooseProductList
+					if(this.chooseProductList.length>0){
+						this.chooseProductListStatus=true
+					}
+					
+				},
+				sure:function(){
+					if(this.chooseProductList.length===0){
+						alert("请选择产品")
+						// this.chooseProductListStatus=false
+					}else{
+						//alert(this.chooseProductList)
+						console.log('')
+						var totalMoney=0;
+						for (var i=0;i<this.chooseProductList.length;i++){
+							totalMoney+=this.chooseProductList[i].newPrice
+						}
+						this.allMoney=totalMoney
+						this.chooseProductListStatus=true
+						this.showProduct=false
+					}
+				},
+				addMore:function(){
+					var arr=[
+					{id:"4",name:"苹果",newPrice:12,oldPrice:15},
+					{id:"5",name:"香蕉",newPrice:13,oldPrice:16},
+					{id:"6",name:"梨子",newPrice:15,oldPrice:17},
+					]
+					this.productList=arr.concat(this.productList)
+					var self=this;
+					alert("没有其他选项了")
+					//ajax请求
+				}
+			}
+		})
+		// console.log(a)
+	</script>
+</body>
+</html>
